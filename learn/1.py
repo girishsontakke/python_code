@@ -1,0 +1,11 @@
+course='Python for Biginners'
+print(len(course))
+print(course.upper())
+print(course.lower())
+print(course)
+print(course[1])
+print(course[1:])
+print(course[:4])
+print(course.find('Biginners'))
+print(course.replace('Biginners','Absolute Biginners'))
+print('Python' in course)
