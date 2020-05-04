@@ -8,3 +8,4 @@ class person:
 student1 = person("Girish", 10, True)
 # print(student1.name())   Error because name attribute is not given to student1
 print(student1.Id)
+print(student1.evaluation)
