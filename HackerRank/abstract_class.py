@@ -8,7 +8,7 @@ class Book(object, metaclass=ABCMeta):
 
     @abstractmethod
     def display(self):
-        print('Something')
+        print('Something')#this is abstract method and not concrete method
 
 
 # Write MyBook class
