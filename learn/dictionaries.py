@@ -67,3 +67,5 @@ new_dict = {**dict, **{'c': 3}}
 
 print(dict)
 print(new_dict)
+del new_dict['c']
+print(new_dict)
