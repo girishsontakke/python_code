@@ -1,58 +1,54 @@
-class Node:
-   def __init__(self, val):
-      self.val = val
-      self.right = None
-      self.left = None
+#from geekforgeeks
+class Node: 
+    def __init__(self,key): 
+        self.left = None
+        self.right = None
+        self.val = key 
+
+# A utility function to insert a new node with the given key 
+def insert(root,node): 
+    if root is None: 
+        root = node 
+    else: 
+        if root.val < node.val: 
+            if root.right is None: 
+                root.right = node 
+            else: 
+                insert(root.right, node) 
+        else: 
+            if root.left is None: 
+                root.left = node 
+            else: 
+                insert(root.left, node) 
+# A utility function to do inorder tree traversal 
+def inorder(root): 
+    if root: 
+        inorder(root.left) 
+        print(root.val) 
+        inorder(root.right) 
 
 
-class BinarySearch:
-   def __init__(self):
-      self.root = None
+# A utility function to search a given key in BST 
+def search(root,key): 
       
-   def insert(self, root, node):
-      if self.root is None:
-         self.root = Node(node)
-      else:
-         if self.root.val > node:
-            if self.root.right is None:
-               self.root.right = node
-            else:
-               self.insert(root.right, node)
-         else:
-            if self.root.left is None:
-               self.root.left = node
-            else:
-               self.insert(root.left, node)
-   
-   def inorder(self, root):
-      if self.root:
-         self.inorder(root.left)
-         print(self.root)
-         self.inorder(root.right)
-   
-   def search(self, root, key):
-      if (self.root == key) or self.root is None:
-         return self.root
-      else:
-         if self.root.val > key:
-            self.search(self.root.left, key)
-         else:
-            self.search(self.root.right, key)
-
-r = Node(50)
-binarysearch = BinarySearch()
-binarysearch.insert(r, 30)
-binarysearch.insert(r, 20) 
-binarysearch.insert(r, 40)
-binarysearch.insert(r, 70)
-binarysearch.insert(r, 60)
-binarysearch.insert(r, 80)
-
-
-print('order')
-binarysearch.inorder(r)
-         
-   
-      
-             
-         
+    # Base Cases: root is null or key is present at root 
+    if root is None or root.val == key: 
+        return root 
+  
+    # Key is greater than root's key 
+    if root.val < key: 
+        return search(root.right,key) 
+    
+    # Key is smaller than root's key 
+    return search(root.left,key) 
+ 
+ 
+r = Node(50) 
+insert(r,Node(30)) 
+insert(r,Node(20)) 
+insert(r,Node(40)) 
+insert(r,Node(70)) 
+insert(r,Node(60)) 
+insert(r,Node(80)) 
+# Print inoder traversal of the BST 
+inorder(r) 
