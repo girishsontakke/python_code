@@ -44,6 +44,7 @@ def search(root,key):
  
  
 r = Node(50) 
+insert(None, Node(30))
 insert(r,Node(30)) 
 insert(r,Node(20)) 
 insert(r,Node(40)) 
