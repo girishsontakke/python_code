@@ -1,1 +1,0 @@
-pw = input("Enter password : ")
