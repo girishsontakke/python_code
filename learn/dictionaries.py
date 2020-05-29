@@ -7,7 +7,7 @@ print(month_conversion.get("dev", "not valid "))
 print(month_conversion["jan"])
 print(month_conversion.values())
 print(month_conversion.keys())
-
+print(month_conversion.items())
 
 # Create your dictionary class
 class my_dictionary(dict):
