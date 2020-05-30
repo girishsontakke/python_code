@@ -1,13 +1,13 @@
 pos = -1
-
+def swap(x, p, q):
+    x[p], x[q] = x[q], x[p]
+   
 
 def sort(lst):
     for i in range(len(lst) - 1, 0, -1):
         for j in range(i):
             if lst[j] > lst[j + 1]:
-                temp = lst[j]
-                lst[j] = lst[j + 1]
-                lst[j + 1] = temp
+                swap(lst, j, j+1)
     return lst
 
 

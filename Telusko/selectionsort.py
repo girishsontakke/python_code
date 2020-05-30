@@ -1,3 +1,7 @@
+def swap(x, p, q):
+    x[p], x[q] = x[q], x[p]
+
+    
 def sort(lst):
     for i in range(len(lst)):
         minpos = i
@@ -5,9 +9,7 @@ def sort(lst):
             if lst[minpos] > lst[j]:
                 minpos = j
 
-        temp = lst[i]
-        lst[i] = lst[minpos]
-        lst[minpos] = temp
+        swap(lst, i, minpos)
 
     return lst
 
