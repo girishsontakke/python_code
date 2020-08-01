@@ -43,7 +43,7 @@ print('dt_now1 = ', dt_now1)
 dt_utcnow1 = datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
 print('dt_utcnow1 =',dt_utcnow1)
 
-dt_mtn = dt_now1.astimezone(pytz.timezone('US/Mountain'))
+dt_mtn = dt_now1.astimezone(pytz.timezone('Asia/Calcutta'))
 print('dt_mtn =',dt_mtn)
 
 # for tz in pytz.all_timezones:
