@@ -10,6 +10,14 @@
 # file_name.write("I am an Engineer")
 # print(file_name.readlines())
 # file_name.close()
-my_file=open("file1.txt", "w")
+import csv
+my_file = open("file1.txt", "w")
 my_file.write("Hello World")
 my_file.close()
+
+
+with open("ex.csv", 'a') as file:
+    writer = csv.writer(file)
+    reader = csv.reader(file)
+    line = "hello world"
+    writer.writerow((line,))
