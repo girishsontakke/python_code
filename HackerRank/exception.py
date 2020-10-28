@@ -6,7 +6,7 @@ class Calculator:
         try:
             if n >= 0 and p >= 0:
                 a = self.n ** self.p
-            return a
+                return a
         except:
             a = "n and p should be non-negative"
             return a   
