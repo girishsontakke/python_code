@@ -8,6 +8,7 @@ import sys
 
 if __name__ == '__main__':
     n = int(input("input number of element in list : "))
+    print("hello")
 
     arr = list(map(int, input("elements :").rstrip().split()))[:n]
 
